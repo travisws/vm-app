@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		68C928ED2D069D3800445172 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68C928EC2D069D3800445172 /* WidgetKit.framework */; };
+		68C928EF2D069D3800445172 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68C928EE2D069D3800445172 /* SwiftUI.framework */; };
+		68C929002D069D3900445172 /* VMWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 68C928EA2D069D3800445172 /* VMWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		682C997D2CE3287600AF004C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -21,13 +27,47 @@
 			remoteGlobalIDString = 682C996A2CE3287600AF004C;
 			remoteInfo = vm;
 		};
+		68C928FE2D069D3900445172 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 682C99632CE3287600AF004C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 68C928E92D069D3800445172;
+			remoteInfo = VMWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		68C929012D069D3900445172 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				68C929002D069D3900445172 /* VMWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		682C996B2CE3287600AF004C /* vm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		682C997C2CE3287600AF004C /* vmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		682C99862CE3287600AF004C /* vmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vmUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		68C928EA2D069D3800445172 /* VMWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = VMWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		68C928EC2D069D3800445172 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		68C928EE2D069D3800445172 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		68C929042D069D3900445172 /* Exceptions for "VMWidget" folder in "VMWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 68C928E92D069D3800445172 /* VMWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		682C996D2CE3287600AF004C /* vm */ = {
@@ -43,6 +83,14 @@
 		682C99892CE3287600AF004C /* vmUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = vmUITests;
+			sourceTree = "<group>";
+		};
+		68C928F02D069D3800445172 /* VMWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				68C929042D069D3900445172 /* Exceptions for "VMWidget" folder in "VMWidgetExtension" target */,
+			);
+			path = VMWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -69,6 +117,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		68C928E72D069D3800445172 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68C928EF2D069D3800445172 /* SwiftUI.framework in Frameworks */,
+				68C928ED2D069D3800445172 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,6 +135,8 @@
 				682C996D2CE3287600AF004C /* vm */,
 				682C997F2CE3287600AF004C /* vmTests */,
 				682C99892CE3287600AF004C /* vmUITests */,
+				68C928F02D069D3800445172 /* VMWidget */,
+				68C928EB2D069D3800445172 /* Frameworks */,
 				682C996C2CE3287600AF004C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,8 +147,18 @@
 				682C996B2CE3287600AF004C /* vm.app */,
 				682C997C2CE3287600AF004C /* vmTests.xctest */,
 				682C99862CE3287600AF004C /* vmUITests.xctest */,
+				68C928EA2D069D3800445172 /* VMWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		68C928EB2D069D3800445172 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				68C928EC2D069D3800445172 /* WidgetKit.framework */,
+				68C928EE2D069D3800445172 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,10 +171,12 @@
 				682C99672CE3287600AF004C /* Sources */,
 				682C99682CE3287600AF004C /* Frameworks */,
 				682C99692CE3287600AF004C /* Resources */,
+				68C929012D069D3900445172 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				68C928FF2D069D3900445172 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				682C996D2CE3287600AF004C /* vm */,
@@ -163,6 +234,28 @@
 			productReference = 682C99862CE3287600AF004C /* vmUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		68C928E92D069D3800445172 /* VMWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68C929052D069D3900445172 /* Build configuration list for PBXNativeTarget "VMWidgetExtension" */;
+			buildPhases = (
+				68C928E62D069D3800445172 /* Sources */,
+				68C928E72D069D3800445172 /* Frameworks */,
+				68C928E82D069D3800445172 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				68C928F02D069D3800445172 /* VMWidget */,
+			);
+			name = VMWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = VMWidgetExtension;
+			productReference = 68C928EA2D069D3800445172 /* VMWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -184,6 +277,9 @@
 						CreatedOnToolsVersion = 16.1;
 						TestTargetID = 682C996A2CE3287600AF004C;
 					};
+					68C928E92D069D3800445172 = {
+						CreatedOnToolsVersion = 16.1;
+					};
 				};
 			};
 			buildConfigurationList = 682C99662CE3287600AF004C /* Build configuration list for PBXProject "vm" */;
@@ -203,6 +299,7 @@
 				682C996A2CE3287600AF004C /* vm */,
 				682C997B2CE3287600AF004C /* vmTests */,
 				682C99852CE3287600AF004C /* vmUITests */,
+				68C928E92D069D3800445172 /* VMWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -223,6 +320,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		682C99842CE3287600AF004C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68C928E82D069D3800445172 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -253,6 +357,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		68C928E62D069D3800445172 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -265,6 +376,11 @@
 			isa = PBXTargetDependency;
 			target = 682C996A2CE3287600AF004C /* vm */;
 			targetProxy = 682C99872CE3287600AF004C /* PBXContainerItemProxy */;
+		};
+		68C928FF2D069D3900445172 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 68C928E92D069D3800445172 /* VMWidgetExtension */;
+			targetProxy = 68C928FE2D069D3900445172 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -392,6 +508,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"vm/Preview Content\"";
+				DEVELOPMENT_TEAM = MK2X7XRV48;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -409,7 +526,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = vm.vm;
+				PRODUCT_BUNDLE_IDENTIFIER = "vm-manager.travis-w-s";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
@@ -429,6 +546,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"vm/Preview Content\"";
+				DEVELOPMENT_TEAM = MK2X7XRV48;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -446,7 +564,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = vm.vm;
+				PRODUCT_BUNDLE_IDENTIFIER = "vm-manager.travis-w-s";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
@@ -543,6 +661,65 @@
 			};
 			name = Release;
 		};
+		68C929022D069D3900445172 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MK2X7XRV48;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VMWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = VMWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "vm-manager.travis-w-s.VMWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		68C929032D069D3900445172 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MK2X7XRV48;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VMWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = VMWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "vm-manager.travis-w-s.VMWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -578,6 +755,15 @@
 			buildConfigurations = (
 				682C99972CE3287600AF004C /* Debug */,
 				682C99982CE3287600AF004C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		68C929052D069D3900445172 /* Build configuration list for PBXNativeTarget "VMWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68C929022D069D3900445172 /* Debug */,
+				68C929032D069D3900445172 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
